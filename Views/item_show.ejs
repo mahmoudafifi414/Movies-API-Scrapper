@@ -1,0 +1,34 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container">
+    <div class="row">
+        <div class="card col-md-12 p-3">
+            <div class="row ">
+                <div class="col-md-4">
+                    <img class="w-100"
+                         src="<%= oneMovieData.movie.Poster == 'N/A' ? 'https://via.placeholder.com/350x350' : oneMovieData.movie.Poster %>">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-block">
+                        <h1 class="card-title"><%= oneMovieData.movie.Title %></h1>
+                        <h3 class="card-title">Release Year: <%= oneMovieData.movie.Year %></h3>
+                        <h4 class="card-title">Ratings Average: <%= oneMovieData.movie.details.imdbRating %></h4>
+
+                        <a href="#" title="Facebook" class="btn btn-primary">
+                            Facebook
+                        </a>
+                        <a href="#" title="Twitter" class="btn btn-info">
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
