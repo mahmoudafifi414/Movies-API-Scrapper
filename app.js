@@ -11,7 +11,8 @@ const client = redis.createClient();
 //use movie router
 const movieRouter = new MovieRouter(app, client)
 //connect the server on port 3000
-app.listen('3000', function () {
+const port = process.env.PORT || 3000
+app.listen(port, function () {
     console.log('connected');
 })
 //connect redis server
