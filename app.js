@@ -3,7 +3,6 @@ import {MovieRouter} from './routes/MovieRouter'
 import redis from 'redis'
 
 const app = express();
-var Request = require("request");
 //use ejs as view template
 app.set('view engine', 'ejs');
 //use redis to persist
